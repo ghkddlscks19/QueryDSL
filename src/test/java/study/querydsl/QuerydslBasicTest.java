@@ -761,7 +761,7 @@ public class QuerydslBasicTest {
 //                        Expressions.stringTemplate("function('lower', {0})", member.username)))
                 .where(member.username.eq(member.username.lower()))
                 .fetch();
-        
+
         for (String s : result) {
             System.out.println("s = " + s);
         }
