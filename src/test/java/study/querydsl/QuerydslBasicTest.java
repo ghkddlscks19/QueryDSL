@@ -453,7 +453,7 @@ public class QuerydslBasicTest {
             System.out.println("s = " + s);
         }
     }
-    
+
     @Test
     public void complexCase() throws Exception{
         List<String> result = queryFactory
@@ -497,7 +497,7 @@ public class QuerydslBasicTest {
         }
 
     }
-    
+
     @Test
     public void constant() throws Exception{
         List<Tuple> result = queryFactory
@@ -524,7 +524,7 @@ public class QuerydslBasicTest {
         }
 
     }
-    
+
     @Test
     public void simpleProjection() throws Exception{
         List<String> result = queryFactory
@@ -553,7 +553,7 @@ public class QuerydslBasicTest {
         }
 
     }
-    
+
     @Test
     public void findDtoByJPQL() throws Exception{
         List<MemberDto> result = em.createQuery("select new study.querydsl.dto.MemberDto(m.username, m.age) " +
@@ -564,7 +564,7 @@ public class QuerydslBasicTest {
             System.out.println("memberDto = " + memberDto);
         }
     }
-    
+
     @Test
     public void findDtoBySetter() throws Exception{
         List<MemberDto> result = queryFactory
@@ -636,7 +636,7 @@ public class QuerydslBasicTest {
             System.out.println("memberDto = " + memberDto);
         }
     }
-    
+
     @Test
     public void dynamicQuery_BooleanBuilder() throws Exception{
         String usernameParam = "member1";
@@ -659,7 +659,7 @@ public class QuerydslBasicTest {
                 .where(builder)
                 .fetch();
     }
-    
+
     @Test
     public void dynamicQuery_WhereParam() throws Exception{
         String usernameParam = "member1";
@@ -736,7 +736,7 @@ public class QuerydslBasicTest {
                 .where(member.age.gt(18))
                 .execute();
     }
-    
+
     @Test
     public void sqlFunction() throws Exception{
         List<String> result = queryFactory
@@ -751,7 +751,7 @@ public class QuerydslBasicTest {
             System.out.println("s = " + s);
         }
     }
-    
+
     @Test
     public void sqlFunction2() throws Exception{
         List<String> result = queryFactory

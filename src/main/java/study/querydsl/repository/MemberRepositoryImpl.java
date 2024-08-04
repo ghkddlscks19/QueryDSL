@@ -73,9 +73,8 @@ public class MemberRepositoryImpl implements MemberRepositoryCustom {
                         usernameEq(condition.getUsername()),
                         teamNameEq(condition.getTeamName()),
                         ageGoe(condition.getAgeGoe()),
-                        ageLoe(condition.getAgeLoe()))
-                .offset(pageable.getOffset())
-                .limit(pageable.getPageSize());
+                        ageLoe(condition.getAgeLoe())
+                );
 
         return PageableExecutionUtils.getPage(content, pageable, countQuery::fetchOne);
 
